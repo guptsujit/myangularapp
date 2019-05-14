@@ -1,0 +1,141 @@
+	 	<!-- topbar -->
+			 	<div class="topbar-1 bg-theme">
+			 		<div class="topbar-1-inner ">
+			 			<ul class="subnavi">
+			 				<li><a routerLink = "/home">Home</a></li>
+			 				<li><a href="#">Support</a></li>
+			 				<li><a href="#">Help</a></li>
+			 				<li *ngIf="!currentUser"><a routerLink = "/login">Login</a></li>
+              <li *ngIf="currentUser"><a (click)="logout()" href= "javascript:void(0)">Logout</a></li> 
+              <li *ngIf="currentUser">Welcome {{getFullName()}}</li>  
+              <li ><a href="javascript:void()" (click) = "getUsers()">Get users</a></li>  
+			 				<li *ngIf="!currentUser"><a href="#">Register</a></li>
+			 			</ul>
+
+			 			<ul class="social social-1">
+			 				<li><a href="#" class="color-theme hover-text-dark"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			 				<li><a href="#" class="color-theme hover-text-dark"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			 				<li><a href="#" class="color-theme hover-text-dark"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			 				<li><a href="#" class="color-theme hover-text-dark"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+			 				<li><a href="#" class="color-theme hover-text-dark"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+			 			</ul>
+
+			 			<ul class="topbar-info topbar-info-1">
+			 				<li><span>Email :</span>&nbsp;&nbsp;<a href="mailto:support@dotted.com">support@dotted.com</a></li>
+			 				<li><span>Phone :</span>&nbsp;&nbsp;<a href="tel:7736629817">773 - 662 - 9817</a></li>
+			 			</ul>
+			 		</div>
+			 	</div>
+			 	<!-- /topbar -->
+
+			 	<!-- Header -->
+			 	<header id="stick" class="header-v1">
+			 		<div class="header-v1-inner">
+			 			<div class="logo-1">
+			 				<a href="index.html"><img src="http://placehold.it/90x24/ccc.jpg" class="img-responsive" alt="Image"></a>
+			 				<p class="slogan-1">Some headline go here</p>
+			 			</div>
+			 			<ul class="navi-right">
+			 				<li><a href="#" class="btn-search-navi color-theme border-color-theme bg-hover-theme"><i class="fa fa-search " aria-hidden="true"></i></a>
+			 					<div class="search-popup">
+				 					<form class="form-search-navi">
+				                          <div class="input-group">
+				                              <input class="form-control" placeholder="Search Here" type="text">
+				                          </div>
+				                          <!-- /input-group -->
+			                      	</form>
+				 				</div>
+			 				</li>
+			 				
+			 				<li><a href="#" class="color-theme border-color-theme bg-hover-theme"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+			 			</ul>
+			 			<nav id="main-navi" class="nav-r">
+							<ul class="navi-level-1">
+				                <li class="has-sub"><a href="index.html" class="dark-text hover-text-theme"><span>Home</span></a>
+				                     <ul class="navi-level-2 ">
+				                        <li class="bg-theme"><a class="white-text" href="index.html">HomePage  v1</a></li>
+				                        <li class="bg-theme"><a class="white-text" href="home_2.html">HomePage  v2</a></li>
+				                        <li class="bg-theme"><a class="white-text" href="home_3.html">HomePage  v3</a></li>
+				                        <li class="bg-theme"><a class="white-text" href="home_4.html">HomePage  v4</a></li>
+				                        <li class="bg-theme"><a class="white-text" href="home_5.html">Home Landing Page</a></li>
+				                        <li class="bg-theme"><a class="white-text" href="home_7.html">Home Boxed</a></li>
+				                    </ul>
+				                </li>
+				                <li class="has-sub"><a href="#" class="dark-text hover-text-theme"><span>Features</span></a>
+				                	<ul class="navi-level-2">
+				                		<li class="bg-theme"><a  class="white-text" href="">Slider</a>
+											<ul class="navi-level-3">
+												<li><a class="white-text" href="index.html">Layer SLider</a></li>
+												<li><a class="white-text" href="home_5.html">Revolution Slider</a></li>
+												<li><a class="white-text" href="home_4.html">Master Slider</a></li>
+											</ul>
+										</li>
+										<li class="bg-theme"><a  class="white-text" href="#">Sub Header</a>
+											<ul class="navi-level-3">
+												<li><a class="white-text" href="sub-header-1.html">Sub Header Versiton 1</a></li>
+												<li><a class="white-text" href="sub-header-2.html">Sub Header Versiton 2</a></li>
+												<li><a class="white-text" href="sub-header-3.html">Sub Header Versiton 3</a></li>
+											</ul>
+										</li>
+										<li class="bg-theme"><a class="white-text" href="pricing-table.html">Pricing Table</a></li>
+										<li class="bg-theme"><a class="white-text" href="icon-box.html">Icon Box</a></li>
+										<li class="bg-theme"><a class="white-text" href="typography.html">Typography</a></li>
+										<li class="bg-theme"><a class="white-text" href="element.html">Element</a></li>
+				                	</ul>
+				                </li>
+				                <li class="has-sub"><a href="#" class="dark-text hover-text-theme"><span>Pages</span></a>
+				                	<ul class="navi-level-2 ">
+				                		 <li class="bg-theme"><a class="white-text" href="shop-catalog.html">Shop</a>
+				                		 	<ul class="navi-level-3">
+												<li class="bg-theme"><a class="white-text" href="shop-catalog.html">Catelog Page</a></li>
+												<li class="bg-theme"><a class="white-text" href="shop-checkout.html">Checkout Page</a></li>
+												<li class="bg-theme"><a class="white-text" href="shop-cart.html">Shopping Cart</a></li>
+												<li class="bg-theme"><a class="white-text" href="shop-single.html">Single Product</a></li>
+											</ul>
+				                		 </li>
+				                        <li class="bg-theme"><a class="white-text" href="testimonials.html">Testimonials</a></li>
+										<li class="bg-theme"><a class="white-text" href="team.html">The team</a>
+											<ul class="navi-level-3">
+												<li><a class="white-text" href="team-single.html">Single Team</a></li>
+												<li><a class="white-text" href="team-single-2.html">Single Team Verision 2</a></li>
+											</ul>
+										</li>
+										<li class="bg-theme"><a class="white-text" href="about.html">About</a>
+										</li>
+										<li class="bg-theme"><a class="white-text" href="faqs.html">FAQs</a></li>
+										<li class="bg-theme"><a class="white-text" href="services.html">Services</a></li>
+										<li class="bg-theme"><a class="white-text" href="404.html">404 Pages</a></li>
+										<li class="bg-theme"><a class="white-text" href="coming-soon.html">Comming Soon</a></li>
+				                    </ul>
+				                </li>
+
+				                <li class="has-sub"><a href="portfolio.html" class="dark-text hover-text-theme"><span>Project</span></a>
+				                	<ul class="navi-level-2">
+										<li class="bg-theme"><a class="white-text" href="portfolio.html">Grid 3 Columns</a></li>
+										<li class="bg-theme"><a class="white-text" href="portfolio-4-cols.html">Grid 4 Columns</a></li>
+										<li class="bg-theme"><a class="white-text" href="portfolio-4-cols-v2.html">Grid 4 Columns Version 2</a></li>
+										<li class="bg-theme"><a class="white-text" href="portfolio-single.html">Single Portfolio</a></li>
+									</ul>
+				                </li>
+				                <li class="has-sub"><a href="blog.html" class="dark-text hover-text-theme"><span>Blog News</span></a>
+				                	<ul class="navi-level-2">
+										<li class="bg-theme"><a class="white-text" href="blog.html">Classic Layout</a></li>
+										<li class="bg-theme"><a class="white-text" href="masonry-blog.html">Masonry Layout</a></li>
+										<li class="bg-theme"><a class="white-text" href="masonry-fullwidth.html">Masonry Full Width</a></li>
+										<li class="bg-theme"><a class="white-text" href="timeline.html">TimeLine Layout</a></li>
+										<li class="bg-theme"><a class="white-text" href="timeline-sidebar.html">TimeLine SideBar</a></li>
+										<li class="bg-theme"><a class="white-text" href="blog-single.html">Single Article</a></li>
+										<li class="bg-theme"><a class="white-text" href="blog-right-sidebar.html">Right Side Bar</a></li>
+									</ul>
+				                </li>
+				                <li class="has-sub"><a href="contact.html" class="dark-text hover-text-theme"><span>Contact</span></a>
+				                	<ul class="navi-level-2">
+				                	<li class="bg-theme"><a class="white-text" href="contact.html">Contact</a></li>
+				                	<li class="bg-theme"><a class="white-text" href="contact-2.html">Contact Verision 2</a></li>
+				                	</ul>
+				                </li>
+				            </ul>
+						</nav>
+						<a href="#menu" class="btn-menu-mobile"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			 		</div>
+			 	</header>
