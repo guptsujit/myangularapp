@@ -27,9 +27,8 @@ export class AuthenticationService {
     return this._httpclient.get<any>(environment.apiBaseUrl + '/getusers')
   }
   setAuthData(currentUserData: any) {
-    console.log(currentUserData);
     localStorage.setItem('token', currentUserData.token);
-    localStorage.setItem('currentUser', JSON.stringify(currentUserData.user));
+    localStorage.setItem('currentUser', JSON.stringify(currentUserData));
     this.currentUserSubject.next(currentUserData);
   }
   private clearAuthData() {

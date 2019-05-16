@@ -7,7 +7,7 @@
 			 				<li><a href="#">Help</a></li>
 			 				<li *ngIf="!currentUser"><a routerLink = "/login">Login</a></li>
               <li *ngIf="currentUser"><a (click)="logout()" href= "javascript:void(0)">Logout</a></li> 
-              <li *ngIf="currentUser">Welcome {{getFullName()}}</li>  
+              <li *ngIf="currentUser">Welcome  {{ getFullName()}}</li> 
               <li ><a href="javascript:void()" (click) = "getUsers()">Get users</a></li>  
 			 				<li *ngIf="!currentUser"><a href="#">Register</a></li>
 			 			</ul>

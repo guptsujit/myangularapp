@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormArray,FormGroup,FormBuilder,Validators} from '@angular/forms';
 import {AuthenticationService} from '../shared/authentication.service';
+import {AlertService} from '../../shared/alert.service';
 import {Router} from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -9,14 +10,15 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 loginForm : FormGroup;
-  constructor(private fb:FormBuilder,private _authenticationService:AuthenticationService,private _router :Router) { }
+  constructor(private fb:FormBuilder,private _authenticationService:AuthenticationService,
+  private _router :Router,private _alertService : AlertService) { }
 
   ngOnInit() {
     this.buildForm();
   }
  buildForm(){
   this.loginForm = this.fb.group({
-    email : ['',Validators.required,Validators.email],
+    email : ['',Validators.required],
     password : ['',Validators.required]
   })
  }
@@ -29,7 +31,8 @@ loginForm : FormGroup;
      this._authenticationService.setAuthData(response);
      this._router.navigate(['/home']);
    },(error)=>{
-     console.log(error);
+       this._alertService.error(error);
+    
    });
   
   }
