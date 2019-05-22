@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Pipe} from '@angular/core';
 
+@Pipe({name: 'exponentialStrength'})
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
